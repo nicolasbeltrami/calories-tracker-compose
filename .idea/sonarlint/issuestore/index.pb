@@ -1,3 +1,23 @@
 
 ?
 settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
+v
+Fpresentation/src/main/java/com/nicolas/caloriestracker/MainActivity.kt,4/d/4d27d65dd8bb619a5200a9786ae4dbb54f6ee1ff
+x
+Hpresentation/src/main/java/com/nicolas/caloriestracker/ui/theme/Color.kt,9/c/9c359f0d328745214c9e58e837ca6a2173f62959
+x
+Hpresentation/src/main/java/com/nicolas/caloriestracker/ui/theme/Theme.kt,3/8/384cc96f4f26368e5982a66e94438e682277015e
+
+`presentation/src/main/java/com/nicolas/caloriestracker/application/CaloriesTrackerApplication.kt,1/e/1e8db93b5bba9af9eb238beefed6ad9e2191e579
+Y
+)presentation/src/main/AndroidManifest.xml,f/f/ff448c8b12f3de1e58a75bb9abe0b8d4396181d5
+n
+>data/src/main/java/com/nicolas/data/remote/model/Nutriments.kt,e/d/ed80d7deeb9b8acbc8e93a3740650fde4389357a
+I
+presentation/build.gradle,2/9/29ca4091f3fd866a7d8488b04776c5994c7983b9
+i
+9data/src/main/java/com/nicolas/data/remote/OpenFoodApi.kt,0/c/0c7f79ba9704ea1b70c0864c52cb4a251b7caab5
+g
+7data/src/main/java/com/nicolas/data/local/TrackerDao.kt,8/2/821befb4ad2931280ee2a14ab3b084d487a33b75
+b
+2domain/src/main/java/com/nicolas/domain/MyClass.kt,3/3/3359ae8f2ddf918cbba03d68e58ec60485c9970c

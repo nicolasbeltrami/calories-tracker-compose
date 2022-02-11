@@ -3,8 +3,12 @@ package com.nicolas.data.di
 import android.app.Application
 import androidx.room.Room
 import com.nicolas.data.local.TrackerDatabase
+import com.nicolas.data.mapper.TrackableFoodMapper
+import com.nicolas.data.mapper.TrackedFoodMapper
 import com.nicolas.data.remote.OpenFoodApi
 import com.nicolas.data.remote.OpenFoodApi.Companion.BASE_URL
+import com.nicolas.data.repository.TrackerRepositoryImp
+import com.nicolas.domain.repository.TrackerRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -51,5 +55,19 @@ object DataModule {
             TrackerDatabase::class.java,
             "tracker_db"
         ).build()
+    }
+
+    @Provides
+    @Singleton
+    fun providesTrackerRepository(
+        api: OpenFoodApi,
+        db: TrackerDatabase
+    ) : TrackerRepository {
+        return  TrackerRepositoryImp(
+            dao = db.dao,
+            api = api,
+            trackableFoodMapper = TrackableFoodMapper(),
+            trackedFoodMapper = TrackedFoodMapper()
+        )
     }
 }

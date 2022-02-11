@@ -10,4 +10,5 @@ java {
 
 dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "com.jakewharton.threetenabp:threetenabp:$threetenabp_version"
 }

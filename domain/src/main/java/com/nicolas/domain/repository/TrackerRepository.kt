@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface TrackerRepository {
 
-    suspend fun searchFood(query: String, page: Int, pageSize: Int): Result<TrackableFood>
+    suspend fun searchFood(query: String, page: Int, pageSize: Int): Result<List<TrackableFood>>
 
     suspend fun insertTrackedFood(food: TrackedFood)
 

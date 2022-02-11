@@ -1,6 +1,6 @@
 package com.nicolas.domain.model
 
-import java.time.LocalDate
+import org.threeten.bp.LocalDate
 
 data class TrackedFood(
     val id: Int? = null,
