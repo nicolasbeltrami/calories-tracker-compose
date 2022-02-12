@@ -8,9 +8,9 @@ import com.nicolas.data.remote.model.Product
 import com.nicolas.domain.model.TrackableFood
 import com.nicolas.domain.model.TrackedFood
 import com.nicolas.domain.repository.TrackerRepository
-import java.time.LocalDate
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import org.threeten.bp.LocalDate
 
 class TrackerRepositoryImp(
     private val dao: TrackerDao,

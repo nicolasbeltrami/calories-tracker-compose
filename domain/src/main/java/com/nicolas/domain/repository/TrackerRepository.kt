@@ -2,8 +2,8 @@ package com.nicolas.domain.repository
 
 import com.nicolas.domain.model.TrackableFood
 import com.nicolas.domain.model.TrackedFood
-import java.time.LocalDate
 import kotlinx.coroutines.flow.Flow
+import org.threeten.bp.LocalDate
 
 interface TrackerRepository {
 
