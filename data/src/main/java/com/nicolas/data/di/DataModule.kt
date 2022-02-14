@@ -1,12 +1,16 @@
 package com.nicolas.data.di
 
 import android.app.Application
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import androidx.room.Room
 import com.nicolas.data.local.TrackerDatabase
 import com.nicolas.data.mapper.TrackableFoodMapper
 import com.nicolas.data.mapper.TrackedFoodMapper
-import com.nicolas.data.remote.OpenFoodApi
-import com.nicolas.data.remote.OpenFoodApi.Companion.BASE_URL
+import com.nicolas.data.preferences.DefaultPreferences
+import com.nicolas.data.preferences.Preferences
+import com.nicolas.data.remote.api.OpenFoodApi
+import com.nicolas.data.remote.api.OpenFoodApi.Companion.BASE_URL
 import com.nicolas.data.repository.TrackerRepositoryImp
 import com.nicolas.domain.repository.TrackerRepository
 import dagger.Module
@@ -14,7 +18,6 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
-import okhttp3.OkHttp
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -69,5 +72,19 @@ object DataModule {
             trackableFoodMapper = TrackableFoodMapper(),
             trackedFoodMapper = TrackedFoodMapper()
         )
+    }
+
+    @Provides
+    @Singleton
+    fun provideSharedPreferences(
+        app: Application
+    ): SharedPreferences {
+        return app.getSharedPreferences("shared_pref", MODE_PRIVATE)
+    }
+
+    @Provides
+    @Singleton
+    fun providePreferences(sharedPreferences: SharedPreferences): Preferences {
+        return DefaultPreferences(sharedPreferences = sharedPreferences)
     }
 }

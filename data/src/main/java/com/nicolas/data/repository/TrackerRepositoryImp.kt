@@ -3,7 +3,7 @@ package com.nicolas.data.repository
 import com.nicolas.data.local.TrackerDao
 import com.nicolas.data.mapper.TrackableFoodMapper
 import com.nicolas.data.mapper.TrackedFoodMapper
-import com.nicolas.data.remote.OpenFoodApi
+import com.nicolas.data.remote.api.OpenFoodApi
 import com.nicolas.data.remote.model.Product
 import com.nicolas.domain.model.TrackableFood
 import com.nicolas.domain.model.TrackedFood

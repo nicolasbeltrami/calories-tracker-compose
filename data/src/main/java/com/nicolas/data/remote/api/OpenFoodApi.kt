@@ -1,4 +1,4 @@
-package com.nicolas.data.remote
+package com.nicolas.data.remote.api
 
 import com.nicolas.data.remote.model.Search
 import retrofit2.http.GET
