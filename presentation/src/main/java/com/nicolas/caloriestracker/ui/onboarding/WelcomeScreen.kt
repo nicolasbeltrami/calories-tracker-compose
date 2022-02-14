@@ -43,6 +43,6 @@ fun WelcomeScreen(
             text = stringResource(
                 id = R.string.next
             ),
-            onCLick = { onNavigate(NavigationEvent.Navigate(Route.AGE)) })
+            onCLick = { onNavigate(NavigationEvent.Navigate(Route.GENDER)) })
     }
 }
