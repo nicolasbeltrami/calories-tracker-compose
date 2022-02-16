@@ -1,5 +1,7 @@
 package com.nicolas.caloriestracker.ui.onboarding
 
-sealed class UiEvents {
+import com.nicolas.caloriestracker.utils.UiText
 
+sealed class UiEvents {
+    data class ShowSnackBarEvent(val message: UiText) : UiEvents()
 }

@@ -25,8 +25,6 @@ o
 ?data/src/main/java/com/nicolas/data/mapper/TrackedFoodMapper.kt,c/d/cd608021f354bf6d95c1c215425ef331dbf1ff28
 v
 Fdata/src/main/java/com/nicolas/data/repository/TrackerRepositoryImp.kt,c/f/cf5cf23a2d9a295945f14c3ad958390990cecb54
-€
-Pdomain/src/main/java/com/nicolas/domain/usecase/CalculateMealNutrientsUseCase.kt,e/2/e246c807192a1c4785dd8268952dc421d6ff9114
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
@@ -58,3 +56,17 @@ w
 Gdomain/src/main/java/com/nicolas/domain/repository/TrackerRepository.kt,6/b/6b97d9502ffde80393542d526f13a31c67283fee
 {
 Kdomain/src/main/java/com/nicolas/domain/usecase/DeleteTrackedFoodUseCase.kt,1/2/129db76c69537ac488893c5ed9515706dfbe31a8
+t
+Ddomain/src/main/java/com/nicolas/domain/usecase/SearchFoodUseCase.kt,6/f/6fbac0a56daa147de2a468c149bf160c960d2bb0
+s
+Cdomain/src/main/java/com/nicolas/domain/usecase/TrackFoodUseCase.kt,d/2/d2d7fdc84db806cda0f9d44e62204569a7002894
+„
+Tpresentation/src/main/java/com/nicolas/caloriestracker/ui/components/ActionButton.kt,1/e/1e14389604984416973f0150d9483e8cde9f8cc5
+n
+>data/src/main/java/com/nicolas/data/preferences/Preferences.kt,3/1/3172d4db851807527a7edfcd3d97e9466d214485
+u
+Edata/src/main/java/com/nicolas/data/preferences/DefaultPreferences.kt,7/7/77d3b2b56fe9f568221c709e251ce0a3ef3184fc
+d
+4data/src/main/java/com/nicolas/data/di/DataModule.kt,a/9/a940cfe2bc7bb325f80be90792c35e7745516166
+I
+presentation/build.gradle,2/9/29ca4091f3fd866a7d8488b04776c5994c7983b9
