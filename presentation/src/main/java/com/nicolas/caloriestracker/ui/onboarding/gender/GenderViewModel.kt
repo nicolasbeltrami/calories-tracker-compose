@@ -1,4 +1,4 @@
-package com.nicolas.caloriestracker.ui.onboarding
+package com.nicolas.caloriestracker.ui.onboarding.gender
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

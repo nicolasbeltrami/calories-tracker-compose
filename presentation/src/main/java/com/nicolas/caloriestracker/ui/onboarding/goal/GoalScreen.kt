@@ -1,4 +1,4 @@
-package com.nicolas.caloriestracker.ui.onboarding
+package com.nicolas.caloriestracker.ui.onboarding.goal
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,18 +18,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nicolas.caloriestracker.navigation.NavigationEvent
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.nicolas.caloriestracker.R
+import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.ui.components.ActionButton
 import com.nicolas.caloriestracker.ui.components.SelectableButton
-import com.nicolas.data.preferences.model.Gender
+import com.nicolas.data.preferences.model.GoalType
 
 @Composable
-fun GenderScreen(
+fun GoalScreen(
     onNavigate: (NavigationEvent.Navigate) -> Unit,
-    viewModel: GenderViewModel = hiltViewModel()
+    viewModel: GoalViewModel = hiltViewModel()
 ) {
+
     LaunchedEffect(key1 = true) {
         viewModel.navigationEvent.collect { event ->
             when (event) {
@@ -50,29 +51,40 @@ fun GenderScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = stringResource(id = R.string.whats_your_gender),
+                text = stringResource(id = R.string.your_goal),
                 style = MaterialTheme.typography.h3
             )
             Spacer(modifier = Modifier.height(24.dp))
             Row {
                 SelectableButton(
-                    text = stringResource(id = R.string.female),
-                    isSelected = viewModel.selectedGender is Gender.Female,
+                    text = stringResource(id = R.string.lose),
+                    isSelected = viewModel.selectedGoal is GoalType.LoseWeight,
                     color = MaterialTheme.colors.primaryVariant,
                     selectedTextColor = Color.White,
                     onClick = {
-                        viewModel.onGenderClick(Gender.Female)
+                        viewModel.onGoalTypeSelected(GoalType.LoseWeight)
                     },
                     textStyle = MaterialTheme.typography.button
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 SelectableButton(
-                    text = stringResource(id = R.string.male),
-                    isSelected = viewModel.selectedGender is Gender.Male,
+                    text = stringResource(id = R.string.keep),
+                    isSelected = viewModel.selectedGoal is GoalType.KeepWeight,
                     color = MaterialTheme.colors.primaryVariant,
                     selectedTextColor = Color.White,
                     onClick = {
-                        viewModel.onGenderClick(Gender.Male)
+                        viewModel.onGoalTypeSelected(GoalType.KeepWeight)
+                    },
+                    textStyle = MaterialTheme.typography.button
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                SelectableButton(
+                    text = stringResource(id = R.string.gain),
+                    isSelected = viewModel.selectedGoal is GoalType.GainWeight,
+                    color = MaterialTheme.colors.primaryVariant,
+                    selectedTextColor = Color.White,
+                    onClick = {
+                        viewModel.onGoalTypeSelected(GoalType.GainWeight)
                     },
                     textStyle = MaterialTheme.typography.button
                 )
@@ -84,4 +96,6 @@ fun GenderScreen(
             modifier = Modifier.align(Alignment.BottomEnd)
         )
     }
+
+
 }
