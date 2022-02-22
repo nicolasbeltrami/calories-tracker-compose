@@ -1,4 +1,4 @@
-package com.nicolas.data.preferences.model
+package com.nicolas.domain.model
 
 sealed class Gender(val name: String) {
     object Male : Gender("male")

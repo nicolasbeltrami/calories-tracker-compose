@@ -23,7 +23,7 @@ import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.ui.components.ActionButton
 import com.nicolas.caloriestracker.ui.components.SelectableButton
-import com.nicolas.data.preferences.model.GoalType
+import com.nicolas.domain.model.GoalType
 
 @Composable
 fun GoalScreen(

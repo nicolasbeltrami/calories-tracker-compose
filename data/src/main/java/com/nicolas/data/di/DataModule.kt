@@ -8,7 +8,7 @@ import com.nicolas.data.local.TrackerDatabase
 import com.nicolas.data.mapper.TrackableFoodMapper
 import com.nicolas.data.mapper.TrackedFoodMapper
 import com.nicolas.data.preferences.DefaultPreferences
-import com.nicolas.data.preferences.Preferences
+import com.nicolas.domain.preferences.Preferences
 import com.nicolas.data.remote.api.OpenFoodApi
 import com.nicolas.data.remote.api.OpenFoodApi.Companion.BASE_URL
 import com.nicolas.data.repository.TrackerRepositoryImp

@@ -9,7 +9,7 @@ import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.navigation.Route
 import com.nicolas.caloriestracker.ui.onboarding.UiEvents
 import com.nicolas.caloriestracker.ui.onboarding.nutrientgoal.NutrientGoalEvent.*
-import com.nicolas.data.preferences.Preferences
+import com.nicolas.domain.preferences.Preferences
 import com.nicolas.domain.usecase.ValidateNutrientsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

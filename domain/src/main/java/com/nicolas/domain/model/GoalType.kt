@@ -1,4 +1,4 @@
-package com.nicolas.data.preferences.model
+package com.nicolas.domain.model
 
 sealed class GoalType(val name: String) {
     object LoseWeight : GoalType("loose_weight")

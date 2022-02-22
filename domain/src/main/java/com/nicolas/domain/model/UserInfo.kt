@@ -1,4 +1,4 @@
-package com.nicolas.data.preferences.model
+package com.nicolas.domain.model
 
 data class UserInfo(
     val gender: Gender,

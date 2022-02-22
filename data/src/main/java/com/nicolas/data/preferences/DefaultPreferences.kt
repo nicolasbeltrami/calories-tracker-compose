@@ -1,10 +1,11 @@
 package com.nicolas.data.preferences
 
 import android.content.SharedPreferences
-import com.nicolas.data.preferences.model.ActivityLevel
-import com.nicolas.data.preferences.model.Gender
-import com.nicolas.data.preferences.model.GoalType
-import com.nicolas.data.preferences.model.UserInfo
+import com.nicolas.domain.model.ActivityLevel
+import com.nicolas.domain.model.Gender
+import com.nicolas.domain.model.GoalType
+import com.nicolas.domain.model.UserInfo
+import com.nicolas.domain.preferences.Preferences
 
 class DefaultPreferences(
     private val sharedPreferences: SharedPreferences

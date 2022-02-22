@@ -23,7 +23,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.ui.components.ActionButton
 import com.nicolas.caloriestracker.ui.components.SelectableButton
-import com.nicolas.data.preferences.model.Gender
+import com.nicolas.domain.model.Gender
 
 @Composable
 fun GenderScreen(

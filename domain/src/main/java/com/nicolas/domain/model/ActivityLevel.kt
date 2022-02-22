@@ -1,4 +1,4 @@
-package com.nicolas.data.preferences.model
+package com.nicolas.domain.model
 
 sealed class ActivityLevel(val name: String) {
     object Low: ActivityLevel("low")

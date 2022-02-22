@@ -8,9 +8,8 @@ import androidx.lifecycle.viewModelScope
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.navigation.Route
 import com.nicolas.caloriestracker.ui.onboarding.UiEvents
-import com.nicolas.data.preferences.Preferences
-import com.nicolas.data.preferences.model.ActivityLevel
-import com.nicolas.data.preferences.model.Gender
+import com.nicolas.domain.preferences.Preferences
+import com.nicolas.domain.model.ActivityLevel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.channels.Channel
