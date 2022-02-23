@@ -1,4 +1,4 @@
-package com.nicolas.caloriestracker.ui.components
+package com.nicolas.caloriestracker.ui.composables
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape

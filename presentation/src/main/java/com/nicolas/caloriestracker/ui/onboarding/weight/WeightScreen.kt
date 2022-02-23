@@ -20,8 +20,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.navigation.NavigationEvent
-import com.nicolas.caloriestracker.ui.components.ActionButton
-import com.nicolas.caloriestracker.ui.components.UnitTextField
+import com.nicolas.caloriestracker.ui.composables.ActionButton
+import com.nicolas.caloriestracker.ui.composables.UnitTextField
 import com.nicolas.caloriestracker.ui.onboarding.UiEvents
 
 @Composable

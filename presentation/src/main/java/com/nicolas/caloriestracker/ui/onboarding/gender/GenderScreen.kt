@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.dp
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.nicolas.caloriestracker.R
-import com.nicolas.caloriestracker.ui.components.ActionButton
-import com.nicolas.caloriestracker.ui.components.SelectableButton
+import com.nicolas.caloriestracker.ui.composables.ActionButton
+import com.nicolas.caloriestracker.ui.composables.SelectableButton
 import com.nicolas.domain.model.Gender
 
 @Composable
