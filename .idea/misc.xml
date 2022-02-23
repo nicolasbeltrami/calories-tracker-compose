@@ -5,6 +5,11 @@
       <map>
         <entry key="../../../../layout/compose-model-1644680116486.xml" value="0.21410472972972974" />
         <entry key="../../../../layout/compose-model-1644684870101.xml" value="0.1" />
+        <entry key="presentation/src/main/res/drawable/ic_breakfast.xml" value="0.181" />
+        <entry key="presentation/src/main/res/drawable/ic_burger.xml" value="0.181" />
+        <entry key="presentation/src/main/res/drawable/ic_dinner.xml" value="0.181" />
+        <entry key="presentation/src/main/res/drawable/ic_lunch.xml" value="0.181" />
+        <entry key="presentation/src/main/res/drawable/ic_snack.xml" value="0.181" />
       </map>
     </option>
   </component>

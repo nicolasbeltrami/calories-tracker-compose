@@ -45,7 +45,7 @@ class CalculateMealNutrientsUseCase(
             caloriesGoal = calorieGoal,
             totalCarbs = totalCarbs,
             totalProteins = totalProteins,
-            totalFatGoal = totalFat,
+            totalFat = totalFat,
             totalCalories = totalCalories,
             mealNutrients = allNutrients
         )
@@ -97,7 +97,7 @@ class CalculateMealNutrientsUseCase(
         val caloriesGoal: Int,
         val totalCarbs: Int,
         val totalProteins: Int,
-        val totalFatGoal: Int,
+        val totalFat: Int,
         val totalCalories: Int,
         val mealNutrients: Map<MealType, MealNutrients>
     )

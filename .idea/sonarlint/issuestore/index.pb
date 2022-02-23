@@ -26,10 +26,6 @@ Fdata/src/main/java/com/nicolas/data/repository/TrackerRepositoryImp.kt,c/f/cf5
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-z
-Jpresentation/src/main/java/com/nicolas/caloriestracker/navigation/Route.kt,3/0/30ec25346cdb645532e15431695c04c75e743038
-„
-Tpresentation/src/main/java/com/nicolas/caloriestracker/navigation/NavigationEvent.kt,7/9/792de16abab74817eeb1b210634cc7bed9445779
 …
 Upresentation/src/main/java/com/nicolas/caloriestracker/navigation/NavControllerExt.kt,5/3/5312d2a53718ba94757bbdac63de9dbe5ee493fe
 x
@@ -80,8 +76,6 @@ q
 Adata/src/main/java/com/nicolas/data/preferences/model/GoalType.kt,d/5/d5880dac11aaa12949ae723b138214d6739ad43a
 –
 fpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/nutrientgoal/NutrientGoalState.kt,6/6/664ba5b7548cb1072f58fbfe84653d07b5f70d3f
-–
-fpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/nutrientgoal/NutrientGoalEvent.kt,5/d/5dd6f572e5f501be677a186272f040fbca9297ec
 Š
 Zpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/goal/GoalViewModel.kt,7/0/70fb44347969b512d6cd780bd0c2895e1145a964
 €
