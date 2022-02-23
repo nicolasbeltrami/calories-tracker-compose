@@ -108,16 +108,12 @@ d
 apresentation/src/main/java/com/nicolas/caloriestracker/ui/trackeroverview/TrackerOverviewEvent.kt,5/8/58b35413e0bf64438026fd917a0a92df53e36881
 –
 fpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/nutrientgoal/NutrientGoalEvent.kt,5/d/5dd6f572e5f501be677a186272f040fbca9297ec
-€
-Pdomain/src/main/java/com/nicolas/domain/usecase/CalculateMealNutrientsUseCase.kt,e/2/e246c807192a1c4785dd8268952dc421d6ff9114
 Œ
 \presentation/src/main/java/com/nicolas/caloriestracker/ui/trackeroverview/model/MealState.kt,9/f/9fa05161714039c8258b97af5bbeed4638e1b262
 „
 Tpresentation/src/main/java/com/nicolas/caloriestracker/navigation/NavigationEvent.kt,7/9/792de16abab74817eeb1b210634cc7bed9445779
 z
 Jpresentation/src/main/java/com/nicolas/caloriestracker/navigation/Route.kt,3/0/30ec25346cdb645532e15431695c04c75e743038
-u
-Edata/src/main/java/com/nicolas/data/preferences/DefaultPreferences.kt,7/7/77d3b2b56fe9f568221c709e251ce0a3ef3184fc
 r
 Bdomain/src/main/java/com/nicolas/domain/preferences/Preferences.kt,8/0/80396d2c2c481f9cd6344b018e9627f9c09c3cef
 C
