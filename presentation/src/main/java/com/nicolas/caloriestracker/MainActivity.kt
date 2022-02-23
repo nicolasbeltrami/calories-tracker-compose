@@ -7,9 +7,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.jakewharton.threetenabp.AndroidThreeTen
 import com.nicolas.caloriestracker.navigation.Route
 import com.nicolas.caloriestracker.navigation.navigate
 import com.nicolas.caloriestracker.ui.onboarding.age.AgeScreen
@@ -21,12 +23,14 @@ import com.nicolas.caloriestracker.ui.onboarding.activitylevel.ActivityLevelScre
 import com.nicolas.caloriestracker.ui.onboarding.goal.GoalScreen
 import com.nicolas.caloriestracker.ui.onboarding.nutrientgoal.NutrientGoalScreen
 import com.nicolas.caloriestracker.ui.theme.CaloriesTrackerTheme
+import com.nicolas.caloriestracker.ui.trackeroverview.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AndroidThreeTen.init(this)
         setContent {
             CaloriesTrackerTheme {
                 val navController = rememberNavController()
@@ -74,7 +78,7 @@ class MainActivity : ComponentActivity() {
                             GoalScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.TRACKER_OVERVIEW) {
-
+                            TrackerOverviewScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.SEARCH) {
 
