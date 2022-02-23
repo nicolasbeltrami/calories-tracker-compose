@@ -38,8 +38,6 @@ m
 =data/src/main/java/com/nicolas/data/remote/api/OpenFoodApi.kt,8/a/8a168761581ee20edf580b1eb4db0d007e444731
 ê
 `presentation/src/main/java/com/nicolas/caloriestracker/application/CaloriesTrackerApplication.kt,1/e/1e8db93b5bba9af9eb238beefed6ad9e2191e579
-v
-Fpresentation/src/main/java/com/nicolas/caloriestracker/utils/UiText.kt,a/3/a3c1c84847124e1934966eaf13637148b7fa74fd
 ç
 ]presentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/welcome/WelcomeScreen.kt,8/2/82c75bb5091da241128155f3e05e77f9ddebd1d8
 é
@@ -108,8 +106,6 @@ d
 apresentation/src/main/java/com/nicolas/caloriestracker/ui/trackeroverview/TrackerOverviewEvent.kt,5/8/58b35413e0bf64438026fd917a0a92df53e36881
 ñ
 fpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/nutrientgoal/NutrientGoalEvent.kt,5/d/5dd6f572e5f501be677a186272f040fbca9297ec
-å
-\presentation/src/main/java/com/nicolas/caloriestracker/ui/trackeroverview/model/MealState.kt,9/f/9fa05161714039c8258b97af5bbeed4638e1b262
 Ñ
 Tpresentation/src/main/java/com/nicolas/caloriestracker/navigation/NavigationEvent.kt,7/9/792de16abab74817eeb1b210634cc7bed9445779
 z
