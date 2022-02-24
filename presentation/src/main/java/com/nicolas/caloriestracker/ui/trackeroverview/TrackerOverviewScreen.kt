@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -21,6 +22,7 @@ import com.nicolas.caloriestracker.ui.composables.DaySelector
 import com.nicolas.caloriestracker.ui.composables.ExpandableMealItem
 import com.nicolas.caloriestracker.ui.composables.NutrientsHeader
 import com.nicolas.caloriestracker.ui.composables.TrackedFoodItem
+import kotlinx.coroutines.flow.collect
 
 @Composable
 fun TrackerOverviewScreen(
@@ -29,6 +31,15 @@ fun TrackerOverviewScreen(
 ) {
     val state = viewModel.state
     val context = LocalContext.current
+
+    LaunchedEffect(key1 = context) {
+        viewModel.navigationEvent.collect { event ->
+            when(event) {
+                is NavigationEvent.Navigate -> onNavigate(event)
+                else -> Unit
+            }
+        }
+    }
 
     LazyColumn(
         modifier = Modifier

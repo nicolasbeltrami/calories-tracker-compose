@@ -1,8 +1,6 @@
 
 ?
 settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
-Y
-)presentation/src/main/AndroidManifest.xml,f/f/ff448c8b12f3de1e58a75bb9abe0b8d4396181d5
 n
 >data/src/main/java/com/nicolas/data/remote/model/Nutriments.kt,e/d/ed80d7deeb9b8acbc8e93a3740650fde4389357a
 g
@@ -62,8 +60,6 @@ Wpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/goal/GoalS
 fpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/nutrientgoal/NutrientGoalState.kt,6/6/664ba5b7548cb1072f58fbfe84653d07b5f70d3f
 Š
 Zpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/goal/GoalViewModel.kt,7/0/70fb44347969b512d6cd780bd0c2895e1145a964
-€
-Ppresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/UiEvents.kt,9/2/923642dba4ee44fd4d0a21f19fbeb9062dc2d17c
 ‹
 [presentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/height/HeightScreen.kt,f/5/f5928fb3714197f48a9f7cc2acbb5d67645c78ec
 ˆ
@@ -104,8 +100,6 @@ d
 apresentation/src/main/java/com/nicolas/caloriestracker/ui/trackeroverview/TrackerOverviewEvent.kt,5/8/58b35413e0bf64438026fd917a0a92df53e36881
 –
 fpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/nutrientgoal/NutrientGoalEvent.kt,5/d/5dd6f572e5f501be677a186272f040fbca9297ec
-„
-Tpresentation/src/main/java/com/nicolas/caloriestracker/navigation/NavigationEvent.kt,7/9/792de16abab74817eeb1b210634cc7bed9445779
 z
 Jpresentation/src/main/java/com/nicolas/caloriestracker/navigation/Route.kt,3/0/30ec25346cdb645532e15431695c04c75e743038
 r
@@ -120,8 +114,6 @@ Upresentation/src/main/java/com/nicolas/caloriestracker/ui/composables/ActionBut
 Xpresentation/src/main/java/com/nicolas/caloriestracker/ui/composables/NutrientBarInfo.kt,1/4/148052a5d54059551b5f02fcbc804a798b1eb953
 ˆ
 Xpresentation/src/main/java/com/nicolas/caloriestracker/ui/composables/NutrientsHeader.kt,5/a/5a7bb0f2f1ee46e8e90510726a36273816aa4799
-v
-Fpresentation/src/main/java/com/nicolas/caloriestracker/MainActivity.kt,4/d/4d27d65dd8bb619a5200a9786ae4dbb54f6ee1ff
 ‘
 apresentation/src/main/java/com/nicolas/caloriestracker/ui/trackeroverview/TrackerOverViewState.kt,7/8/78002acead351f6673cb91156a06c5ab6d2a48d5
 …
@@ -134,5 +126,3 @@ Vpresentation/src/main/java/com/nicolas/caloriestracker/ui/composables/ParseDate
 Tpresentation/src/main/java/com/nicolas/caloriestracker/ui/composables/DaySelector.kt,2/d/2d31ab4aa8722faa0a2f4b4c4addf4cd02825ba8
 €
 Pdomain/src/main/java/com/nicolas/domain/usecase/CalculateMealNutrientsUseCase.kt,e/2/e246c807192a1c4785dd8268952dc421d6ff9114
-•
-epresentation/src/main/java/com/nicolas/caloriestracker/ui/trackeroverview/TrackerOverviewViewModel.kt,d/0/d0fd9d862ba72224c339fcf1d29ffdfe7e41753d
