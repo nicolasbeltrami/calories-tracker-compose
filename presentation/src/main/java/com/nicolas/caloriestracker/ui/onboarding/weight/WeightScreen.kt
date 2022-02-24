@@ -22,26 +22,20 @@ import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.ui.composables.ActionButton
 import com.nicolas.caloriestracker.ui.composables.UnitTextField
-import com.nicolas.caloriestracker.ui.onboarding.UiEvents
+import com.nicolas.caloriestracker.ui.UiEvents
 
 @Composable
 fun WeightScreen(
     scaffoldState: ScaffoldState,
-    onNavigate: (NavigationEvent.Navigate) -> Unit,
+    onNextClick: () -> Unit,
     viewModel: WeightViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
 
     LaunchedEffect(key1 = true) {
-        viewModel.navigationEvent.collect { event ->
-            when (event) {
-                is NavigationEvent.Navigate -> onNavigate(event)
-                else -> Unit
-            }
-        }
-
         viewModel.uiEvent.collect { event ->
-            when(event) {
+            when (event) {
+                is UiEvents.Success -> onNextClick()
                 is UiEvents.ShowSnackBarEvent -> {
                     scaffoldState.snackbarHostState.showSnackbar(
                         message = event.message.asString(context)

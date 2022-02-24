@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.navigation.Route
-import com.nicolas.caloriestracker.ui.onboarding.UiEvents
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.domain.preferences.Preferences
 import com.nicolas.domain.model.ActivityLevel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -37,7 +37,7 @@ class ActivityLevelViewModel @Inject constructor(
     fun onNextClick() {
         viewModelScope.launch {
             preferences.saveActivityLevel(selectedActivityLevel)
-            _navigationEvent.send(NavigationEvent.Navigate(Route.GOAL))
+            _uiEvent.send(UiEvents.Success)
         }
     }
 }

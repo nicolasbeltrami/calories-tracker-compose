@@ -29,7 +29,17 @@ class TrackerRepositoryImp(
                 page = page,
                 pageSize = pageSize
             )
-            val trackableProduct = searchResponse.products.map { product: Product -> trackableFoodMapper.fromProductToTrackableFood(product) }
+            val trackableProduct = searchResponse.products
+                .filter {
+                    val calculatedCalories =
+                        it.nutriments.carbohydrates100g * 4f +
+                                it.nutriments.proteins100g * 4f +
+                                it.nutriments.fat100g * 9f
+                    val lowerBound = calculatedCalories * 0.99f
+                    val upperBound = calculatedCalories * 1.01f
+                    it.nutriments.energyKcal100g in (lowerBound..upperBound)
+                }
+                .map { product: Product -> trackableFoodMapper.fromProductToTrackableFood(product) }
             Result.success(trackableProduct)
         } catch (e: Exception) {
             Result.failure(e)

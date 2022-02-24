@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.navigation.Route
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.domain.preferences.Preferences
 import com.nicolas.domain.model.GoalType
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,8 +24,8 @@ class GoalViewModel @Inject constructor(
     var selectedGoal by mutableStateOf<GoalType>(GoalType.KeepWeight)
         private set
 
-    private val _navigationEvent = Channel<NavigationEvent>()
-    val navigationEvent = _navigationEvent.receiveAsFlow()
+    private val _uiEvent = Channel<UiEvents>()
+    val uiEvent = _uiEvent.receiveAsFlow()
 
     fun onGoalTypeSelected(goalType: GoalType) {
         selectedGoal = goalType
@@ -33,7 +34,7 @@ class GoalViewModel @Inject constructor(
     fun onNextClick() {
         viewModelScope.launch {
             preferences.saveGoalType(selectedGoal)
-            _navigationEvent.send(NavigationEvent.Navigate(Route.NUTRIENT_GOAL))
+            _uiEvent.send(UiEvents.Success)
         }
     }
 

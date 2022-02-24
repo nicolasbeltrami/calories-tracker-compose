@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.navigation.Route
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.domain.preferences.Preferences
 import com.nicolas.domain.model.Gender
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,8 +24,8 @@ class GenderViewModel @Inject constructor(
     var selectedGender by mutableStateOf<Gender>(Gender.Female)
         private set
 
-    private val _navigationEvent = Channel<NavigationEvent>()
-    val navigationEvent = _navigationEvent.receiveAsFlow()
+    private val _uiEvent = Channel<UiEvents>()
+    val uiEvent = _uiEvent.receiveAsFlow()
 
     fun onGenderClick(gender: Gender) {
         selectedGender = gender
@@ -33,7 +34,7 @@ class GenderViewModel @Inject constructor(
     fun onNextClick() {
         viewModelScope.launch {
             preferences.saveGender(selectedGender)
-            _navigationEvent.send(NavigationEvent.Navigate(Route.AGE))
+            _uiEvent.send(UiEvents.Success)
         }
     }
 }

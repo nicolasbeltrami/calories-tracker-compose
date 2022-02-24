@@ -28,7 +28,7 @@ import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.ui.composables.SearchTextField
 import com.nicolas.caloriestracker.ui.composables.TrackableFoodItem
-import com.nicolas.caloriestracker.ui.onboarding.UiEvents
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.domain.model.MealType
 import org.threeten.bp.LocalDate
 

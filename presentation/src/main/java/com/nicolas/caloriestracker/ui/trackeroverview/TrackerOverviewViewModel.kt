@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.navigation.Route
-import com.nicolas.caloriestracker.ui.onboarding.UiEvents
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.domain.preferences.Preferences
 import com.nicolas.domain.usecase.CalculateMealNutrientsUseCase
 import com.nicolas.domain.usecase.DeleteTrackedFoodUseCase
@@ -47,19 +47,6 @@ class TrackerOverviewViewModel @Inject constructor(
 
     fun onEvent(event: TrackerOverviewEvent) {
         when (event) {
-            is TrackerOverviewEvent.OnAddFoodClickEvent -> {
-                viewModelScope.launch {
-                    _navigationEvent.send(
-                        NavigationEvent.Navigate(
-                            route = Route.SEARCH
-                                    + "/${event.meal.mealType.name}"
-                                    + "/${state.date.dayOfMonth}"
-                                    + "/${state.date.monthValue}"
-                                    + "/${state.date.year}"
-                        )
-                    )
-                }
-            }
             is TrackerOverviewEvent.OnDeleteTrackedFoodClickEvent -> {
                 viewModelScope.launch {
                     deleteTrackedFoodUseCase(event.trackedFood)

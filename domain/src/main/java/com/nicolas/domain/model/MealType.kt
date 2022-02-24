@@ -13,7 +13,7 @@ sealed class MealType(val name: String) {
                 "lunch" -> Lunch
                 "dinner" -> Dinner
                 "snack" -> Snack
-                else -> Snack
+                else -> Breakfast
             }
         }
     }

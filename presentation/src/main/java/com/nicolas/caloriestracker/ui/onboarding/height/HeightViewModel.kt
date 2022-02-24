@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.navigation.Route
-import com.nicolas.caloriestracker.ui.onboarding.UiEvents
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.caloriestracker.utils.UiText
 import com.nicolas.domain.preferences.Preferences
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -49,7 +49,7 @@ class HeightViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveHeight(heightNumber)
-            _navigationEvent.send(NavigationEvent.Navigate(Route.WEIGHT))
+            _uiEvent.send(UiEvents.Success)
         }
     }
 

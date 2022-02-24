@@ -21,20 +21,21 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.navigation.NavigationEvent
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.caloriestracker.ui.composables.ActionButton
 import com.nicolas.caloriestracker.ui.composables.SelectableButton
 import com.nicolas.domain.model.ActivityLevel
 
 @Composable
 fun ActivityLevelScreen(
-    onNavigate: (NavigationEvent.Navigate) -> Unit,
+    onNextClick: () -> Unit,
     viewModel: ActivityLevelViewModel = hiltViewModel()
 ) {
 
     LaunchedEffect(key1 = true) {
-        viewModel.navigationEvent.collect { event ->
+        viewModel.uiEvent.collect { event ->
             when (event) {
-                is NavigationEvent.Navigate -> onNavigate(event)
+                is UiEvents.Success -> onNextClick()
                 else -> Unit
             }
         }

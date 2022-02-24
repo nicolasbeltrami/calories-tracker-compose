@@ -9,37 +9,26 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.nicolas.caloriestracker.R
-import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.ui.composables.AddButton
 import com.nicolas.caloriestracker.ui.composables.DaySelector
 import com.nicolas.caloriestracker.ui.composables.ExpandableMealItem
 import com.nicolas.caloriestracker.ui.composables.NutrientsHeader
 import com.nicolas.caloriestracker.ui.composables.TrackedFoodItem
-import kotlinx.coroutines.flow.collect
+import com.nicolas.caloriestracker.ui.trackeroverview.TrackerOverviewEvent.OnDeleteTrackedFoodClickEvent
 
 @Composable
 fun TrackerOverviewScreen(
-    onNavigate: (NavigationEvent.Navigate) -> Unit,
+    onNavigate: (String, Int, Int, Int) -> Unit,
     viewModel: TrackerOverviewViewModel = hiltViewModel()
 ) {
     val state = viewModel.state
     val context = LocalContext.current
-
-    LaunchedEffect(key1 = context) {
-        viewModel.navigationEvent.collect { event ->
-            when(event) {
-                is NavigationEvent.Navigate -> onNavigate(event)
-                else -> Unit
-            }
-        }
-    }
 
     LazyColumn(
         modifier = Modifier
@@ -77,11 +66,15 @@ fun TrackerOverviewScreen(
                             .fillMaxWidth()
                             .padding(horizontal = 8.dp)
                     ) {
-                        state.trackedFoods.forEach { food ->
+                        val foods = state.trackedFoods.filter {
+                            it.mealType == meal.mealType
+                        }
+                        foods.forEach { food ->
                             TrackedFoodItem(
-                                trackedFood = food, onDeleteClick = {
+                                trackedFood = food,
+                                onDeleteClick = {
                                     viewModel.onEvent(
-                                        TrackerOverviewEvent.OnDeleteTrackedFoodClickEvent(food)
+                                        OnDeleteTrackedFoodClickEvent(food)
                                     )
                                 }
                             )
@@ -93,8 +86,11 @@ fun TrackerOverviewScreen(
                                 meal.name.asString(context = context)
                             ),
                             onClick = {
-                                viewModel.onEvent(
-                                    TrackerOverviewEvent.OnAddFoodClickEvent(meal)
+                                onNavigate(
+                                    meal.name.asString(context = context),
+                                    state.date.dayOfMonth,
+                                    state.date.monthValue,
+                                    state.date.year
                                 )
                             },
                             modifier = Modifier.fillMaxWidth()

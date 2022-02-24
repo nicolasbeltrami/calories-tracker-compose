@@ -15,13 +15,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.nicolas.caloriestracker.R
-import com.nicolas.caloriestracker.navigation.NavigationEvent
-import com.nicolas.caloriestracker.navigation.Route
 import com.nicolas.caloriestracker.ui.composables.ActionButton
 
 @Composable
 fun WelcomeScreen(
-    onNavigate: (NavigationEvent.Navigate) -> Unit
+    onNextClick: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -40,6 +38,9 @@ fun WelcomeScreen(
             text = stringResource(
                 id = R.string.next
             ),
-            onCLick = { onNavigate(NavigationEvent.Navigate(Route.GENDER)) })
+            onCLick = {
+                onNextClick()
+            }
+        )
     }
 }

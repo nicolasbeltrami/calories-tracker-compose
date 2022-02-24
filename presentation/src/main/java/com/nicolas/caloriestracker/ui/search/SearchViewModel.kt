@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.navigation.NavigationEvent
-import com.nicolas.caloriestracker.ui.onboarding.UiEvents
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.caloriestracker.utils.UiText
 import com.nicolas.domain.usecase.SearchFoodUseCase
 import com.nicolas.domain.usecase.TrackFoodUseCase

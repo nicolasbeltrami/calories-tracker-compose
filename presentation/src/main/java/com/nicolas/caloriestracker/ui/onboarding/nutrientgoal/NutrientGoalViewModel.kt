@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.navigation.Route
-import com.nicolas.caloriestracker.ui.onboarding.UiEvents
+import com.nicolas.caloriestracker.ui.UiEvents
 import com.nicolas.caloriestracker.ui.onboarding.nutrientgoal.NutrientGoalEvent.*
 import com.nicolas.domain.preferences.Preferences
 import com.nicolas.domain.usecase.ValidateNutrientsUseCase
@@ -57,7 +57,7 @@ class NutrientGoalViewModel @Inject constructor(
                         preferences.saveProteinRatio(result.proteinRatio)
                         preferences.saveFatRatio(result.fatRatio)
                         viewModelScope.launch {
-                            _navigationEvent.send(NavigationEvent.Navigate(Route.TRACKER_OVERVIEW))
+                            _uiEvent.send(UiEvents.Success)
                         }
                     }
                     is ValidateNutrientsUseCase.Result.Error -> {

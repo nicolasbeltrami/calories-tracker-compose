@@ -22,26 +22,26 @@ import com.nicolas.caloriestracker.R
 import com.nicolas.caloriestracker.navigation.NavigationEvent
 import com.nicolas.caloriestracker.ui.composables.ActionButton
 import com.nicolas.caloriestracker.ui.composables.UnitTextField
-import com.nicolas.caloriestracker.ui.onboarding.UiEvents
+import com.nicolas.caloriestracker.ui.UiEvents
 
 @Composable
 fun AgeScreen(
     scaffoldState: ScaffoldState,
-    onNavigate: (NavigationEvent.Navigate) -> Unit,
+    onNextClick: () -> Unit,
     viewModel: AgeViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
 
     LaunchedEffect(key1 = true) {
-        viewModel.navigationEvent.collect { event ->
+        viewModel.uiEvent.collect { event ->
             when (event) {
-                is NavigationEvent.Navigate -> onNavigate(event)
+                is UiEvents.Success -> onNextClick()
                 else -> Unit
             }
         }
 
         viewModel.uiEvent.collect { event ->
-            when(event) {
+            when (event) {
                 is UiEvents.ShowSnackBarEvent -> {
                     scaffoldState.snackbarHostState.showSnackbar(
                         message = event.message.asString(context)
