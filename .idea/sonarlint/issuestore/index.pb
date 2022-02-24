@@ -83,8 +83,6 @@ g
 i
 9domain/src/main/java/com/nicolas/domain/model/GoalType.kt,7/d/7d8daa20a52834eaabec3b597a53c9f98147fe7f
 i
-9domain/src/main/java/com/nicolas/domain/model/UserInfo.kt,2/c/2c21e01734ea8fb664a743c3a2d61d8fe2000da6
-i
 9domain/src/main/java/com/nicolas/domain/model/MealType.kt,b/9/b993c4ea5d20c0e56095b546b61f3c93d5f106c9
 l
 <domain/src/main/java/com/nicolas/domain/model/TrackedFood.kt,5/0/504fcb2fe5ef0e25cd768b9f62cb08e088f90643
@@ -126,8 +124,6 @@ Vpresentation/src/main/java/com/nicolas/caloriestracker/ui/composables/ParseDate
 Tpresentation/src/main/java/com/nicolas/caloriestracker/ui/composables/DaySelector.kt,2/d/2d31ab4aa8722faa0a2f4b4c4addf4cd02825ba8
 €
 Pdomain/src/main/java/com/nicolas/domain/usecase/CalculateMealNutrientsUseCase.kt,e/2/e246c807192a1c4785dd8268952dc421d6ff9114
-u
-Edata/src/main/java/com/nicolas/data/preferences/DefaultPreferences.kt,7/7/77d3b2b56fe9f568221c709e251ce0a3ef3184fc
 ‚
 Rpresentation/src/main/java/com/nicolas/caloriestracker/ui/composables/AddButton.kt,7/2/724941a02e33f12e6fc0b93ec589bd9c0a8cac42
 …
@@ -148,5 +144,3 @@ Opresentation/src/main/java/com/nicolas/caloriestracker/ui/search/SearchState.kt
 Xpresentation/src/main/java/com/nicolas/caloriestracker/ui/search/TrackableFoodUiState.kt,0/b/0b18765d9d6380522d1a14c057972fc742d6e0ae
 š
 jpresentation/src/main/java/com/nicolas/caloriestracker/ui/onboarding/nutrientgoal/NutrientGoalViewModel.kt,1/2/12b374e5217fcd7ba13d0f442f172701ac5be7bc
-
-Opresentation/src/main/java/com/nicolas/caloriestracker/ui/search/SearchEvent.kt,d/9/d97bba88a05dbdf853da8db53478d4f0087024d2

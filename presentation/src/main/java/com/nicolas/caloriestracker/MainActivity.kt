@@ -27,13 +27,20 @@ import com.nicolas.caloriestracker.ui.onboarding.nutrientgoal.NutrientGoalScreen
 import com.nicolas.caloriestracker.ui.search.SearchScreen
 import com.nicolas.caloriestracker.ui.theme.CaloriesTrackerTheme
 import com.nicolas.caloriestracker.ui.trackeroverview.TrackerOverviewScreen
+import com.nicolas.domain.preferences.Preferences
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var preferences: Preferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidThreeTen.init(this)
+        val shouldShowOnBoarding = preferences.loadShouldShowOnboarding()
         setContent {
             CaloriesTrackerTheme {
                 val navController = rememberNavController()
@@ -45,7 +52,11 @@ class MainActivity : ComponentActivity() {
                 ) {
                     NavHost(
                         navController = navController,
-                        startDestination = Route.WELCOME
+                        startDestination = if (shouldShowOnBoarding) {
+                            Route.WELCOME
+                        } else {
+                            Route.TRACKER_OVERVIEW
+                        }
                     ) {
                         composable(Route.WELCOME) {
                             WelcomeScreen(onNavigate = navController::navigate)
